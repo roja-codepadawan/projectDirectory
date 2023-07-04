@@ -6,6 +6,26 @@ Create a basic project Directory
 
 Clone the repository from GitHub.com to create a local copy on your computer and sync.
 
+Create the app locally
+
+```
+$ python3 -m venv venv
+$ . venv/bin/activate
+$ pip install fastapi uvicorn
+```
+
+Try it:
+
+```
+$ uvicorn app.main:app --port 8080
+```
+
+Save dependencies:
+
+```
+$ pip freeze > requirements.txt
+```
+
 # 2. Dockerize an app
 
 ```
@@ -36,7 +56,6 @@ docker rm fastapi-container docker run -d --name
 
 fastapi-container -p 8080:8080 -v $(pwd):/code fastapi-image
 ```
-
 
 cookbook:
 https://youtu.be/0jzjz4MZ4ZU
